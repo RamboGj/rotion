@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: rotion
+appId: com.rotion.app
+productName: Rotion
 directories:
   buildResources: build
 files:
