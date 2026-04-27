@@ -9,8 +9,15 @@ export default defineConfig({
   },
   preload: {},
   renderer: {
+    define: {
+      'process.platform': JSON.stringify(process.platform)
+    },
+    server: {
+      port: 4927
+    },
     resolve: {
       alias: {
+        '~': resolve('.'),
         '@renderer': resolve('src/renderer/src')
       }
     },

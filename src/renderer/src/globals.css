@@ -1,7 +1,20 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 * {
     font-family: "Inter", sans-serif;
+}
+
+html {
+    overflow: hidden;
+}
+
+@utility region-drag {
+    -webkit-app-region: drag;
+}
+
+@utility region-no-drag {
+    -webkit-app-region: no-drag;
 }
 
 @theme {
@@ -15,5 +28,27 @@
     --color-rotion-700: #272235;
     --color-rotion-800: #1e1a29;
     --color-rotion-900: #17141f;
-    /*  */
+
+    --animate-slideIn: slideIn 0.25s;
+    --animate-slideOut: slideOut 0.25s;
+
+    @keyframes slideIn {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: var(--radix-collapsible-content-width);
+        }
+    }
+
+    @keyframes slideOut {
+        from {
+            width: var(--radix-collapsible-content-width);
+        }
+
+        to {
+            width: 0;
+        }
+    }
 }
