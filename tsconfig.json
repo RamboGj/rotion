@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@*": [
+        "./src/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "composite": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+  },
+  "include": [
+    "src",
+    "electron.vite.config.*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
