@@ -2,7 +2,9 @@ import { app, shell, BrowserWindow, ipcMain } from 'electron'
 import { join, resolve } from 'path'
 import { electronApp, optimizer } from '@electron-toolkit/utils'
 import { registerRoute } from '../lib/electron-router-dom'
+
 import "./ipc"
+import "./store"
 
 function createWindow(): void {
   // Create the browser window.
