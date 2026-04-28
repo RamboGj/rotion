@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "esnext",
     "paths": {
       "~/*": [
         "./*"
@@ -20,7 +21,8 @@
   },
   "include": [
     "src",
-    "electron.vite.config.*"
+    "electron.vite.config.*",
+    "src/preload/index.d.ts"
   ],
   "exclude": [
     "node_modules"
