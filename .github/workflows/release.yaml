@@ -16,9 +16,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install Node.js, NPM and Yarn
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
+
+      - name: Remove lockfile to work around npm optional deps bug
+        shell: bash
+        run: rm -f package-lock.json
 
       - name: apt-update
         if: startsWith(matrix.os, 'ubuntu-latest')
