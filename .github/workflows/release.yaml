@@ -34,7 +34,11 @@ jobs:
           rm -f package-lock.json
           npm install --include=optional
 
-      - name: Build and release Electron app
+      - name: Build renderer and main
+        shell: bash
+        run: npm run build
+
+      - name: Package and publish Electron app
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
