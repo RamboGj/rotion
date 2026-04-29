@@ -1,8 +1,8 @@
 {
   "name": "rotion",
   "productName": "Rotion",
-  "version": "1.0.0",
-  "description": "An Electron application with React and TypeScript",
+  "version": "0.0.0",
+  "description": "A Notion alternative written in Electron",
   "main": "./out/main/index.js",
   "author": "example.com",
   "homepage": "https://electron-vite.org",
@@ -19,7 +19,8 @@
     "build:unpack": "npm run build && electron-builder --dir",
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "electron-vite build && electron-builder --mac",
-    "build:linux": "electron-vite build && electron-builder --linux"
+    "build:linux": "electron-vite build && electron-builder --linux",
+    "release": "electron-builder --publish always"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.2",
@@ -39,7 +40,9 @@
     "electron-store": "^8.2.0",
     "phosphor-react": "^1.4.1",
     "react-router-dom": "^7.14.2",
-    "vite-tsconfig-paths": "^6.1.1"
+    "vite-tsconfig-paths": "^6.1.1",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^3.0.0",
@@ -57,8 +60,6 @@
     "eslint": "^9.39.1",
     "postcss": "^8.5.12",
     "prettier": "^3.7.4",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
     "tailwind-scrollbar": "^4.0.2",
     "tailwindcss": "^4.2.4",
     "typescript": "^5.9.3",
