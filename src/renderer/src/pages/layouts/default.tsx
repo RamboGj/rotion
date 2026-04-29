@@ -6,13 +6,13 @@ import { Sidebar } from "../../components/Sidebar";
 import { useState } from 'react';
 
 export function Default() {
-    const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false)
+    const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true)
 
     return (
         <Collapsible.Root
             className="w-screen h-screen bg-rotion-900 text-rotion-100 flex"
             onOpenChange={setIsSidebarOpen}
-            defaultOpen
+            open={isSidebarOpen}
         >
             <Sidebar />
             <div className="flex flex-col flex-1 max-h-screen">

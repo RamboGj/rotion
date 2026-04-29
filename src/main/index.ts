@@ -5,6 +5,8 @@ import { registerRoute } from '../lib/electron-router-dom'
 
 import "./ipc"
 import "./store"
+import { createShortcuts } from './shortcuts'
+import { createTray } from './tray'
 
 function createWindow(): void {
   // Create the browser window.
@@ -29,6 +31,9 @@ function createWindow(): void {
     browserWindow: mainWindow,
     htmlFile: join(__dirname, '../renderer/index.html'),
   })
+
+  createTray(mainWindow)
+  createShortcuts(mainWindow)
 
 
   mainWindow.on('ready-to-show', () => {

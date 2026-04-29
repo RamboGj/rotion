@@ -39,9 +39,6 @@ ipcMain.handle(IPC.DOCUMENTS.CREATE, async (_): Promise<CreateDocumentResponse> 
 
 
 ipcMain.handle(IPC.DOCUMENTS.SAVE, async (_, { content, id, title }: SaveDocumentRequest): Promise<void> => {
-    
-    console.log({   content, id, title})
-
     store.set(`documents.${id}`, {
         content,
         id,
